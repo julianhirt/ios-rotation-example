@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		84071F2319BEFBEE002443D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84071F2219BEFBEE002443D9 /* main.m */; };
 		84071F2619BEFBEE002443D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84071F2519BEFBEE002443D9 /* AppDelegate.m */; };
-		84071F2919BEFBEE002443D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84071F2819BEFBEE002443D9 /* ViewController.m */; };
+		84071F2919BEFBEE002443D9 /* RotableModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84071F2819BEFBEE002443D9 /* RotableModalViewController.m */; };
 		84071F2C19BEFBEE002443D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84071F2A19BEFBEE002443D9 /* Main.storyboard */; };
 		84071F2E19BEFBEE002443D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84071F2D19BEFBEE002443D9 /* Images.xcassets */; };
 		84071F3A19BEFBEE002443D9 /* RotationExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84071F3919BEFBEE002443D9 /* RotationExampleTests.m */; };
+		84071F4519BEFCD4002443D9 /* PortraitFixedTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84071F4419BEFCD4002443D9 /* PortraitFixedTableTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +32,15 @@
 		84071F2219BEFBEE002443D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84071F2419BEFBEE002443D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84071F2519BEFBEE002443D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		84071F2719BEFBEE002443D9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		84071F2819BEFBEE002443D9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84071F2719BEFBEE002443D9 /* RotableModalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotableModalViewController.h; sourceTree = "<group>"; };
+		84071F2819BEFBEE002443D9 /* RotableModalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotableModalViewController.m; sourceTree = "<group>"; };
 		84071F2B19BEFBEE002443D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84071F2D19BEFBEE002443D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		84071F3319BEFBEE002443D9 /* RotationExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RotationExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84071F3819BEFBEE002443D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84071F3919BEFBEE002443D9 /* RotationExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotationExampleTests.m; sourceTree = "<group>"; };
+		84071F4319BEFCD4002443D9 /* PortraitFixedTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortraitFixedTableTableViewController.h; sourceTree = "<group>"; };
+		84071F4419BEFCD4002443D9 /* PortraitFixedTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortraitFixedTableTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,8 +84,10 @@
 			children = (
 				84071F2419BEFBEE002443D9 /* AppDelegate.h */,
 				84071F2519BEFBEE002443D9 /* AppDelegate.m */,
-				84071F2719BEFBEE002443D9 /* ViewController.h */,
-				84071F2819BEFBEE002443D9 /* ViewController.m */,
+				84071F4319BEFCD4002443D9 /* PortraitFixedTableTableViewController.h */,
+				84071F4419BEFCD4002443D9 /* PortraitFixedTableTableViewController.m */,
+				84071F2719BEFBEE002443D9 /* RotableModalViewController.h */,
+				84071F2819BEFBEE002443D9 /* RotableModalViewController.m */,
 				84071F2A19BEFBEE002443D9 /* Main.storyboard */,
 				84071F2D19BEFBEE002443D9 /* Images.xcassets */,
 				84071F2019BEFBEE002443D9 /* Supporting Files */,
@@ -215,8 +220,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84071F2919BEFBEE002443D9 /* ViewController.m in Sources */,
+				84071F2919BEFBEE002443D9 /* RotableModalViewController.m in Sources */,
 				84071F2619BEFBEE002443D9 /* AppDelegate.m in Sources */,
+				84071F4519BEFCD4002443D9 /* PortraitFixedTableTableViewController.m in Sources */,
 				84071F2319BEFBEE002443D9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

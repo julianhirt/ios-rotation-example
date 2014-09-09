@@ -1,25 +1,124 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Hj-HQ-nRh">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Rotable Modal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RotableModalViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rotate this..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnG-ur-evA">
+                                <rect key="frame" x="192" y="66" width="216" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="216" id="s6o-QG-89i"/>
+                                    <constraint firstAttribute="height" constant="98" id="teV-hc-RJ7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVe-p9-1br">
+                                <rect key="frame" x="185" y="172" width="230" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="WZz-x3-ytv"/>
+                                    <constraint firstAttribute="width" constant="230" id="q5S-LF-Hpk"/>
+                                </constraints>
+                                <state key="normal" title="Close Modal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeModal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bRk-mM-L3N"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dnG-ur-evA" firstAttribute="centerX" secondItem="y3c-jy-aDJ" secondAttribute="centerX" id="5XG-QP-vv3"/>
+                            <constraint firstAttribute="centerX" secondItem="AVe-p9-1br" secondAttribute="centerX" id="BLq-eH-ebY"/>
+                            <constraint firstAttribute="centerX" secondItem="dnG-ur-evA" secondAttribute="centerX" id="V9V-E1-MLD"/>
+                            <constraint firstAttribute="centerX" secondItem="dnG-ur-evA" secondAttribute="centerX" id="Xif-Do-YX0"/>
+                            <constraint firstAttribute="centerY" secondItem="AVe-p9-1br" secondAttribute="centerY" constant="81.5" id="erV-3N-epO"/>
+                            <constraint firstItem="AVe-p9-1br" firstAttribute="top" secondItem="dnG-ur-evA" secondAttribute="bottom" constant="8" id="fWc-cJ-MJ5"/>
+                            <constraint firstItem="dnG-ur-evA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="kRl-ZS-Hpk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="V9V-E1-MLD"/>
+                                <exclude reference="erV-3N-epO"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1645" y="890"/>
+        </scene>
+        <!--Portrait Only-->
+        <scene sceneID="S5o-fk-slm">
+            <objects>
+                <tableViewController id="scG-LB-kMg" customClass="PortraitFixedTableTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Jar-8r-avE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="k8V-Yw-deW">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="ovb-XN-ebV" style="IBUITableViewCellStyleDefault" id="nAg-l7-pok">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nAg-l7-pok" id="Wnb-X8-gn6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Show Detail as Modal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ovb-XN-ebV">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" id="2MB-Wd-lfh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="scG-LB-kMg" id="9eF-qC-mcI"/>
+                            <outlet property="delegate" destination="scG-LB-kMg" id="LMV-lg-hq5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Portrait Only" id="bAt-r5-xaF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jup-WM-0mU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937" y="890"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cQm-CY-Zky">
+            <objects>
+                <navigationController id="5Hj-HQ-nRh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KNV-iI-48t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="scG-LB-kMg" kind="relationship" relationship="rootViewController" id="XVr-18-hvB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMB-E5-Guq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117" y="890"/>
         </scene>
     </scenes>
 </document>

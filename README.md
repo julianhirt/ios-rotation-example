@@ -9,7 +9,7 @@ Having 2 ViewControllers:
 
 This solves the issue in iOS8 when dismissing ViewController2 while in landscape mode.
 
-This 'hack' usees the application:supportedInterfaceOrientationsForWindow: method on the applications delegate. 
+This 'hack' uses the application:supportedInterfaceOrientationsForWindow: method on the applications delegate. 
 It's most definitely not a very nice solution but it works for now. 
 
 ![Example](/iphone_animation.gif?raw=true "Example from iOS8(Beta5) Simulator")
